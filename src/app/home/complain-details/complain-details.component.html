@@ -1,0 +1,16 @@
+<div class="row" *ngIf="complain" >
+    <h1>Complain ID {{complain.complainId}} from Type {{complain.type}}</h1>
+    <!--<h2 >{{complain.complains[1].complain}}  {{complain.complains[i]}}</h2>-->
+    <div >
+      <p class="list-group-item-text" >
+        <span *ngFor="let co of complain.complains">
+              {{co.complain}} by {{ co.name }} </span>
+      </p>
+    </div>
+
+
+
+    <!--<p class="list-group-item-text"> {{complain.complains[i]}}-->
+    <!--</p>-->
+</div>
+
