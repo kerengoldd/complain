@@ -6,7 +6,7 @@ import {BycertainComponent} from "./home/bycertain/bycertain.component";
 import {ByuserandtypeComponent} from "./home/byuserandtype/byuserandtype.component";
 
 const appRoutes: Routes =[
-    {path:'' , redirectTo:'all', pathMatch:'full'},
+    {path:'' , redirectTo:'/all', pathMatch:'full'},
     {path:'all' , component:AllComponent},
     {path:'bycertain' , component:BycertainComponent},
     {path:'byuserandtype' , component:ByuserandtypeComponent}

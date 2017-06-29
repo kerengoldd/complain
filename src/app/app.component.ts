@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  loadFeature = 'all';
+  loadFeature = '';
 
   onFeature(feature: string){
     console.log(`AppComponent :: to ${feature} page`);
