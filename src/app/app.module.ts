@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +14,7 @@ import {HttpModule} from "@angular/http";
 import { ComplainDetailsComponent } from './home/complain-details/complain-details.component';
 import { ComplainListComponent } from './home/complain-list/complain-list.component';
 import { ComplainItemComponent } from './home/complain-list/complain-item/complain-item.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -29,9 +31,13 @@ import { ComplainItemComponent } from './home/complain-list/complain-item/compla
   imports: [
     BrowserModule,
     AppRouting,
-    HttpModule
+    HttpModule,
+      FormsModule
   ],
-  providers: [ComplainService],
+
+  providers: [ComplainService ,
+    {provide: LocationStrategy,
+      useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
